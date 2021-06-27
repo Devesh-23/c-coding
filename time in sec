@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class time{
+	private:
+		int ans;
+		int hh,mm,ss;
+	public:
+		void gettime(){
+			cout<<"Enter the time: "<<endl;
+			cout<<"Hours? ";
+			cin>>hh;
+			cout<<"Minutes? ";
+			cin>>mm;
+			cout<<"seconds? ";
+			cin>>ss;
+		}
+		void convert(){
+			ans=(hh*3600)+(mm*60)+(ss);
+		}
+		void display(){
+			cout<<"The time is= "<<hh<<":"<<mm<<":"<<ss<<endl;
+			cout<<"Total time in seconds: "<<ans<<endl;
+		}		
+};
+
+int main(){
+	time t;
+	t.gettime();
+	t.convert();
+	t.display();
+	return 0;
+}
