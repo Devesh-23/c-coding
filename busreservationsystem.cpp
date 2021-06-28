@@ -6,7 +6,7 @@
 using namespace std;
 static int p = 0;
 
-class a{
+class BUS{
     char busn[5], driver[10], arrival[5], depart[5], from[10], to[10], seat[8][4][10];
     public:
         void install();
@@ -22,7 +22,7 @@ void vline(char ch){
 	    cout<<ch;
 }
 
- void a::install(){
+ void BUS::install(){
     cout<<"Enter bus no: ";
 	cin>>bus[p].busn;
 	cout<<"\nEnter Driver's name: ";
@@ -39,7 +39,7 @@ void vline(char ch){
 	p++;
 }
 
-void a::allotment(){
+void BUS::allotment(){
     int seat;
 	char number[5];
 	top:
@@ -73,7 +73,7 @@ void a::allotment(){
   }
 
 
-void a::empty(){
+void BUS::empty(){
   for(int i=0; i<8;i++)
   {
     for(int j=0;j<4;j++){
@@ -82,7 +82,7 @@ void a::empty(){
   }
 }
 
-void a::show(){
+void BUS::show(){
   int n;
   char number[5];
   cout<<"Enter bus no: ";
@@ -110,7 +110,7 @@ while(n<=p){
     cout<<"Enter correct bus no: ";
 }
 
-void a::position(int l){
+void BUS::position(int l){
   int s=0;p=0;
   for (int i =0; i<8;i++){
     cout<<"\n";
@@ -138,7 +138,7 @@ void a::position(int l){
   cout<<"\n\nThere are "<<p<<" seats empty in Bus No: "<<bus[l].busn;
   }
 
-void a::avail(){
+void BUS::avail(){
 	for(int n=0;n<=p;n++){
 		vline('*');
 		cout<<"Bus No: \t"<<bus[n].busn<<"\nDriver: \t"<<bus[n].driver<<"\t\tArrival time: \t"<<bus[n].arrival<<"\tDEparture time: \t"<<bus[n].depart<<"\nFrom: \t\t"<<bus[n].from<<"\t\tTo: \t\t"<<bus[n].to<<"\n";
